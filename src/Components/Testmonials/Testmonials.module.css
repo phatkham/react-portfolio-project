@@ -1,0 +1,59 @@
+.testi__con {
+    max-width: 1170px;
+    height: 500px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+
+    & .testi__title {
+        margin-top: 55px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    & .testi__list {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+
+        & .testi__items {
+            width: 320px;
+            margin: 0 auto;
+
+            & img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 100%;
+                margin: 20px 0;
+            }
+
+            & h4 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            & .bio {
+                color: #757575;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .testi__con {
+        height: auto;
+
+        & .testi__list {
+            flex-direction: column;
+
+            & .testi__items {
+                width: 100%;
+                margin: 0;
+                padding: 30px;
+            }
+        }
+    }
+}

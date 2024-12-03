@@ -1,0 +1,130 @@
+nav {
+  background-color: #0085ff;
+  overflow: hidden;
+  position: relative;
+
+  & a {
+    color: #fff;
+  }
+
+  .bars {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    color: #fff;
+  }
+
+  & .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  & .nav_com {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .logo {
+      & a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+
+    & ul {
+      display: flex;
+      list-style: none;
+
+      & li {
+        margin: 0 35px;
+
+        & a {
+          text-decoration: none;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    & .button {
+      width: 100px;
+      height: 35px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+      }
+
+      & a {
+        color: #000;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav_com {
+    flex-direction: column;
+    height: auto !important;
+    margin: 50px 0;
+    align-items: start !important;
+    margin-left: 30px;
+
+    & ul,
+    .button {
+      display: none !important;
+    }
+  }
+
+  .modile_menu {
+    list-style: none;
+
+    & li {
+      margin: 35px;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  & .mobile_btton {
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-left: 35px;
+    margin-bottom: 20px;
+
+    &:hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    & a {
+      color: #000;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+    .modile_menu, .bars, .mobile_btton {
+        display: none;
+    }
+}
